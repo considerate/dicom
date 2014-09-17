@@ -1,0 +1,9 @@
+fulladder
+a,input,user_entered
+b,input,user_entered
+Cin,input,user_entered
+Cout,output,user_entered
+inst1~0,comb,compiler_generated
+inst5~0,comb,compiler_generated
+Sum,output,user_entered
+,hierarchy,user_entered

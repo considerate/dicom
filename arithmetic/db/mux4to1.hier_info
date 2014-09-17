@@ -1,0 +1,23 @@
+|mux4to1
+Q <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+select1 => decoder2to4:inst5.x1
+select0 => decoder2to4:inst5.x2
+x3 => inst.IN1
+x1 => inst2.IN1
+x0 => inst3.IN1
+x2 => inst1.IN1
+
+
+|mux4to1|decoder2to4:inst5
+Q4 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+x1 => inst.IN0
+x1 => inst1.IN0
+x1 => inst4.IN0
+x2 => inst.IN1
+x2 => inst5.IN0
+x2 => inst2.IN0
+Q3 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q1 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,51 @@
+|alu1bit
+Result <= mux4to1:inst2.Q
+op1 => mux4to1:inst2.select0
+op2 => mux4to1:inst2.select1
+a => fulladder:inst.a
+a => inst5.IN1
+a => inst4.IN0
+b => fulladder:inst.b
+b => inst5.IN0
+b => inst4.IN1
+Cin => fulladder:inst.Cin
+Cout <= fulladder:inst.Cout
+
+
+|alu1bit|mux4to1:inst2
+Q <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+select1 => decoder2to4:inst5.x1
+select0 => decoder2to4:inst5.x2
+x3 => inst.IN1
+x1 => inst2.IN1
+x0 => inst3.IN1
+x2 => inst1.IN1
+
+
+|alu1bit|mux4to1:inst2|decoder2to4:inst5
+Q4 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+x1 => inst.IN0
+x1 => inst1.IN0
+x1 => inst4.IN0
+x2 => inst.IN1
+x2 => inst5.IN0
+x2 => inst2.IN0
+Q3 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q1 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu1bit|fulladder:inst
+Sum <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst3.IN0
+a => inst2.IN0
+b => inst.IN1
+b => inst4.IN0
+b => inst2.IN1
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cin => inst4.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+

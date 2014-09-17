@@ -1,0 +1,13 @@
+fulladder
+a,input,user_entered
+b,input,user_entered
+Cin,input,user_entered
+Cout,output,user_entered
+inst,comb,user_entered
+inst1,comb,user_entered
+inst2,comb,user_entered
+inst3,comb,user_entered
+inst4,comb,user_entered
+inst5,comb,user_entered
+Sum,output,user_entered
+,hierarchy,user_entered
